@@ -1,0 +1,91 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+                //Op die manier kunnen zoekmachines javascript doorzoeken
+
+                /*var name = prompt('Wat is uw naam?'); 
+                if (name == 'Xavier') { 
+                    alert('Hallo cursusleider!'); 
+                } else if (name == 'Pieter') { 
+                    alert('Hallo organisator!');
+                } else {
+                    alert('Hallo cursist ' + name + '!'); 
+                }*/
+                
+                /*var name = prompt('Wat is uw naam?'); 
+                while (name != 'Xavier') {
+                    alert('Naam is ongeldig, kies een andere.');
+                    name = prompt('Wat is uw naam?'); 
+                }
+                alert('Eindelijk Xavier!');*/
+            
+                /*for (var i = 1; i < 100; ++i) { 
+                    if (i > 5 && i < 10)
+                        continue; 
+                    if (i > 15)
+                        break;
+                        document.write('<p>Teller is nu ' + i);
+                    }
+                document.write('<p>Waarde van i ' + i);*/
+                
+                //Oefening 1
+                /*for (var i = 1; i < 400; ++i) {
+                    result = Math.sqrt(i);
+                    round = Math.round(result);
+                    if(round==result) {
+                        document.write('<p>'+i);                        
+                    }
+                } */
+            
+            
+                //Oefening 2
+                /*result = 0;
+                getal = prompt('Geef getal');
+                for (var i = 1; i < getal; ++i) {
+                    result += i; 
+                }
+                document.write('<p>'+result);*/
+            
+                //Oefening 3
+                /*breedte = prompt('Geef breedte');
+                hoogte = prompt('Geef hoogte');
+                lengte = prompt('Geef lengte');
+                
+                oppervlakte = breedte*hoogte*2 + lengte*hoogte*2;
+                document.write('<p>'+oppervlakte);*/
+            
+                //Oefening 4
+                aantal = prompt('Geef aantal abonnementen');
+                var abonnementen = new Array();
+                for (var i = 0; i < aantal; ++i) {
+                    naam = prompt('Geef naam op');
+                    vast = prompt('Geef vaste prijs op');
+                    maandelijks = prompt('Geef maandelijkse prijs op');
+                    abonnementen[i]=[naam, vast,maandelijks];
+                }
+                aantalmaanden = prompt('Geef aantal maanden');
+                var prijs = new Array();
+                for (var i = 0; i < aantal; ++i) {
+                    kost=parseInt(abonnementen[i][1],10) + parseInt(abonnementen[i][2],10)*aantalmaanden;
+                    prijs[i] = [abonnementen[i][0], kost];
+                }
+                prijs = prijs.sort(function(a, b) {
+                    return a[1] - b[1]; 
+                });
+                for (var i = 0; prijs.length; ++i) {
+                    document.write('<p>'+prijs[i][0]+' '+prijs[i][1]);
+                }
+            -->        
+        </script>
+    </body>
+</html>
