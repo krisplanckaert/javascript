@@ -1,0 +1,46 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chaining</title>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        
+        <script>
+            $(function() {
+                
+                //Chaining van JQuery, niet aan te raden, kan onoverzichtelijk worden
+                $('.selector').addClass('test').css('color', 'red').removeClass('selector');  
+
+                var elm = $('input:text');
+                var maxLength = parseInt('0' + elm.attr('maxlength'),10);
+
+                if(maxLength > 20) {
+                    elm.val('Max ' + maxLength + ' chars');
+                }
+                
+                var content = $('selector').html(); // haalt de inhoud op
+                content = $('selector').html('Dit is de nieuwe inhoud'); // plaatst de inhoud in selector
+                
+                $('div').hasClass('.selector')
+            });            
+        </script>
+        
+        <div class="selector">
+            bla
+            bla
+            koetje
+            boe            
+        </div>
+        
+        <form>
+            <input type="text" name="voornaam" maxlength="25"/>
+        </form>
+        
+    </body>
+</html>

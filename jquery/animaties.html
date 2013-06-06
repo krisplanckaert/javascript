@@ -1,0 +1,29 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>animaties JQuery</title>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <p>Deze gaat verdwijnen...</p>  
+        <pre>
+            &lt;h1&gt;Titel&lt;/h1&gt;
+        </pre>
+        <script>
+            $('p').click(function () {
+                $(this).fadeOut();  
+                //fadeToggle = visible:none
+            });
+            
+            $('pre').click(function() {
+               $(this).fadeTo(3000,0.5); 
+            });
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Events</title>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <a href="http://www.google.be" onclick="myFunction();return false;">Klik</a>  <!-- oude manier, return false is om ervoor te zorgen dat de pagina niet geladen wordt -->
+        
+        <script>
+            function clickerdeclick(e) {
+                e.preventDefault();  // idem als return false, indien dit er niet staat, zal de pagina naar google gaan.
+                alert('hoi');
+                var elm = $(this);  // het P of a object waar je op geklikt hebt
+                elm.html('Nu niet meer');
+            }
+            
+            $(function(){
+                $('a').click(clickerdeclick);
+                $('p').click(clickerdeclick);
+            });
+            
+        </script>
+        
+        <p>U kunt ook hier klikken</p>
+        
+    </body>
+</html>

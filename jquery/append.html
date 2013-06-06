@@ -1,0 +1,32 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Append JQuery</title>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        
+        <script>
+            $(function() {
+
+                $('.menu').append('<li>Derde</li>');
+                $('.menu').prepend('<li>Bovenaan</li>'); 
+                $('<li>Vierde</li>').appendTo('.menu');
+                $('.menu li:first').before('<li>Voor</li>').after('<li>Na</li>');
+                
+            });            
+        </script>
+        
+        <ul class="menu">
+            <li>Eerste</li>
+            <li>Tweede</li>
+        </ul>
+        
+        
+    </body>
+</html>

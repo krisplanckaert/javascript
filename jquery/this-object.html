@@ -1,0 +1,25 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>this-object</title>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <script>
+            var obj = {
+                func1: function() {
+                    alert('Doe iets!');
+                },
+                func2: function() {
+                    this.func1();
+                }
+            };
+            obj.func2(); //alert...
+        </script>
+    </body>
+</html>
